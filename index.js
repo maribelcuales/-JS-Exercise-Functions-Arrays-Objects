@@ -61,8 +61,9 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName({id: id, name: name, email: email}) {
   /* code here */
+  return `Hello, my name is ${name}`;
 }
 
 /**
