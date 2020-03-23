@@ -299,7 +299,10 @@ const sum = ((a,b) => {
   return a + b;
 }); 
 
-const addFive = null; // code here!
+const addFive = ((num) => {
+  return num + 5;
+})
+
 const argTimesTwo = null; // code here!
 
 /**
