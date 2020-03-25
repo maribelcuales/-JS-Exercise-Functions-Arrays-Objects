@@ -303,7 +303,9 @@ const addFive = ((num) => {
   return num + 5;
 })
 
-const argTimesTwo = null; // code here!
+const argTimesTwo = ((num) => {
+  return num * 2;
+})
 
 /**
  * ### Challenge `carMaker`
@@ -318,8 +320,16 @@ const argTimesTwo = null; // code here!
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
+function carMaker(odometer) {
   /* code here */
+  const odometerProps = {
+    odometer: odometer,
+    drive: function(distance) {
+      const newDistance = this.odometer + distance; 
+      return newDistance;
+    }
+  }
+  return odometerProps;  
 }
 
 /// ////// END OF CHALLENGE /////////
