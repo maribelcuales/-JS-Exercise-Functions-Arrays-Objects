@@ -325,16 +325,11 @@ function carMaker(odometer) {
   const odometerProps = {
     odometer: odometer,
     drive: function (distance) {
-      const newDistance = odometer + distance;
-      return newDistance;
+      let newOdometer = this.odometer + distance;
+      odometerProps.odometer = newOdometer;
+      return odometerProps.odometer;
     }
   }
-  /*
-  const newOdometer = {
-    odometer: odometerProps.drive(distance),
-  }
-  return newOdometer;
-  */
   return odometerProps;
 }
 
