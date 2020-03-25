@@ -324,12 +324,18 @@ function carMaker(odometer) {
   /* code here */
   const odometerProps = {
     odometer: odometer,
-    drive: function(distance) {
-      const newDistance = this.odometer + distance; 
+    drive: function (distance) {
+      const newDistance = odometer + distance;
       return newDistance;
     }
   }
-  return odometerProps;  
+  /*
+  const newOdometer = {
+    odometer: odometerProps.drive(distance),
+  }
+  return newOdometer;
+  */
+  return odometerProps;
 }
 
 /// ////// END OF CHALLENGE /////////
